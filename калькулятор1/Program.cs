@@ -118,11 +118,21 @@ public class Application
 
     private IMenu<IOperation> menu;
 
-    public void Run()
+    
+     public void Run()
     {
-        Operation operation = (Operation)menu.Show().ItemSelector.Select();
-        double result = operation.Run(10, 5);
-        Console.WriteLine($"Результат: {result}");
+        while (true)
+        {
+            Operation operation = (Operation)menu.Show().ItemSelector.Select();
+            double result = operation.Run(10, 5);
+            Console.WriteLine($"Результат: {result}");
+
+            Console.WriteLine("Для выхода нажмите Escape, для продолжения нажмите любую клавишу");
+            if (Console.ReadKey(true).Key == ConsoleKey.Escape)
+            {
+                break;
+            }
+        }
     }
 }
 

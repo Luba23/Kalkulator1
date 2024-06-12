@@ -74,8 +74,12 @@ internal class LocalInstaller : IWindsorInstaller
                      .ImplementedBy<Cos>(),
             Component.For<Operation>()
                      .ImplementedBy<Sin>(),
+           Component.For<Operation>()
+                     .ImplementedBy<Tg>(),
             Component.For<Operation>()
-                     .ImplementedBy<Tg>()
+                     .ImplementedBy<Factorial>(),
+            Component.For<Operation>()
+                     .ImplementedBy<Mod>()
         );
     }
 }

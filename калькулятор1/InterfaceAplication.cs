@@ -5,7 +5,7 @@ using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
 using Calculator1.Operation;
 
-namespace CalculatorCsharp;
+namespace CalculatorCsharp{
 
 public interface IOperation
 {
@@ -201,4 +201,4 @@ public sealed class NewOperationMenu : IMenu<IOperation>
         return this;
     }
 }
-
+}
